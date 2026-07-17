@@ -120,11 +120,11 @@ const COLLECTIONS = [
 ];
 
 const WHY = [
-  { icon: Sparkles, title: "Bespoke Designs", copy: "Designed around your story." },
-  { icon: PackageOpen, title: "Complete Wedding Collection", copy: "Everything your celebration needs." },
-  { icon: Gem, title: "Premium Materials", copy: "Luxury finishes you'll love." },
-  { icon: HeartHandshake, title: "Thoughtful Personalisation", copy: "Every detail made uniquely yours." },
-  { icon: Gift, title: "Beyond Invitations", copy: "Stationery, keepsakes & wedding essentials." },
+  { icon: Sparkles, title: "Bespoke\nDesigns", copy: "Designed around your story." },
+  { icon: PackageOpen, title: "Complete Wedding\nCollection", copy: "Everything your celebration needs." },
+  { icon: Gem, title: "Premium\nMaterials", copy: "Luxury finishes you'll love." },
+  { icon: HeartHandshake, title: "Thoughtful\nPersonalisation", copy: "Every detail made uniquely yours." },
+  { icon: Gift, title: "Beyond\nInvitations", copy: "Stationery, keepsakes & wedding essentials." },
 ];
 
 const PROCESS = [
@@ -573,7 +573,11 @@ function Landing() {
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <SectionHead
             eyebrow="Why Couples Love Chatterbox"
-            title="Crafted With Care, Delivered With Love"
+            title={
+              <>
+                Crafted With Care,<br />Delivered With Love
+              </>
+            }
           />
 
           <div className="mt-14 grid gap-y-12 gap-x-6 grid-cols-2 lg:grid-cols-5">
@@ -589,7 +593,7 @@ function Landing() {
                     </span>
                   </div>
                   <div className="mx-auto mt-5 h-px w-8 bg-primary/30" />
-                  <h4 className="mt-4 text-lg md:text-xl text-charcoal leading-tight">{w.title}</h4>
+                  <h4 className="mt-4 text-lg md:text-xl text-charcoal leading-tight whitespace-pre-line">{w.title}</h4>
                   <p className="mt-1 text-[0.85rem] text-muted-foreground">{w.copy}</p>
                 </div>
               );
@@ -856,7 +860,7 @@ function Landing() {
 
       {/* FOOTER */}
       <footer className="border-t border-border/40">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-6 px-6 py-8 md:flex-row md:justify-between md:gap-6">
+        {/* <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-6 px-6 py-8 md:flex-row md:justify-between md:gap-6">
           <div className="flex items-center gap-3">
             <img
               src="/src/assets/Chatterbox Weddings Logo.png"
@@ -885,7 +889,7 @@ function Landing() {
               </a>
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="border-t border-border/70 py-5 text-center text-[0.72rem] tracking-[0.2em] uppercase text-muted-foreground">
           © {new Date().getFullYear()} Chatterbox Weddings · Bespoke Wedding Stationery
         </div>
@@ -902,7 +906,7 @@ function SectionHead({
   copy,
 }: {
   eyebrow: string;
-  title: string;
+  title: React.ReactNode;
   copy?: string;
 }) {
   return (
