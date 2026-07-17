@@ -36,6 +36,9 @@ import {
 import logoAsset from "@/assets/chatterbox-logo.png.asset.json";
 import heroAsset from "@/assets/wedding-hero.png.asset.json";
 
+import headerLogo from "@/assets/Chatterbox Weddings Logo.png";
+import heroBanner from "@/assets/Wedding-Banner.png";
+
 import journeyInvitation from "@/assets/journey-invitation.jpg";
 import journeyArrival from "@/assets/journey-arrival.jpg";
 import journeyHotel from "@/assets/journey-hotel.jpg";
@@ -281,7 +284,7 @@ function Landing() {
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-3 md:px-10 md:py-4">
           <a href="#top" className="flex items-center gap-2 shrink-0">
             <img
-              src="/assets/Chatterbox Weddings Logo.png"
+              src={headerLogo}
               alt="Chatterbox Weddings"
               className="h-20 w-20 md:h-22 md:w-22 rounded-full object-cover"
             />
@@ -338,7 +341,7 @@ function Landing() {
         <div className="mx-auto max-w-[1400px] px-4 md:px-8">
           <div className="relative rounded-[28px] md:rounded-[40px] overflow-hidden shadow-luxe">
             <img
-              src="/assets/Wedding-Banner.png"
+              src={heroBanner}
               alt="Bespoke Wedding Stationery — Designed Around Your Story"
               className="w-full h-[65vh] lg:h-auto object-cover block"
             />
@@ -863,7 +866,7 @@ function Landing() {
         {/* <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-6 px-6 py-8 md:flex-row md:justify-between md:gap-6">
           <div className="flex items-center gap-3">
             <img
-              src="/assets/Chatterbox Weddings Logo.png"
+              src={headerLogo}
               alt="Chatterbox Weddings"
               className="h-20 w-20 rounded-full object-cover"
             />
